@@ -31,8 +31,10 @@ char server[] = "www.google.com";    // name address for Google (using DNS)
 WiFiSSLClient client;
 
 void setup() {
+  WiFi.setPins(8, 7, 4, 2);
+
   //Initialize serial and wait for port to open:
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
